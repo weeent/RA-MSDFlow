@@ -1,0 +1,22 @@
+{
+  "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+  "dataset": "robustad",
+  "category": "PCB",
+  "split": "train",
+  "target_variants": [
+    "exposure",
+    "white_balance",
+    "gradient",
+    "compound"
+  ],
+  "learned_dim": 16,
+  "descriptor_checkpoint": "outputs/msdflow/PCB/descriptor/seed9826/checkpoints/best.pt",
+  "image_size": 256,
+  "batch_size": 8,
+  "num_workers": 4,
+  "branch_index": 2,
+  "device": "cuda",
+  "data_seed": 9826,
+  "backbone_weights": "weights/torchvision/wide_resnet50_2-95faca4d.pth",
+  "output_directory": "cache/msdflow/PCB/train"
+}

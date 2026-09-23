@@ -1,0 +1,28 @@
+{
+  "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+  "dataset": "robustad",
+  "category": "PCB",
+  "train_split": "train",
+  "validation_split": "val",
+  "target_variants": [
+    "exposure",
+    "white_balance",
+    "gradient",
+    "compound"
+  ],
+  "image_size": 256,
+  "learned_dim": 16,
+  "batch_size": 16,
+  "num_workers": 4,
+  "device": "cuda",
+  "seed": 9826,
+  "output_directory": "outputs/msdflow/PCB/descriptor/seed9826",
+  "training": {
+    "epochs": 10,
+    "learning_rate": 0.0003,
+    "checkpoint_interval_epochs": 5,
+    "checkpoint_io_lock_path": "outputs/msdflow/checkpoint_io.lock",
+    "amp": true,
+    "seed": 9826
+  }
+}

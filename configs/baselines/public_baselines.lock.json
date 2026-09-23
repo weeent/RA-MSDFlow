@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "baselines": {
+    "wtflow": {
+      "url": "https://github.com/lil-wayne-0319/fmad.git",
+      "commit": "f621f2b251637605a7d25593251d3be89a8c9734",
+      "directory": "third_party/wt_flow_fmad",
+      "main_table": true
+    },
+    "refp": {
+      "url": "https://github.com/CLendering/ReFP-AD.git",
+      "commit": "0118c9899926e1394bd411aba23ee45f0b07407e",
+      "directory": "third_party/ReFP-AD",
+      "main_table": true
+    },
+    "msflow": {
+      "url": "https://github.com/cool-xuan/msflow.git",
+      "commit": "e23975598bc7eb6f74604739d8f04d1519d704da",
+      "directory": "third_party/msflow",
+      "main_table": true
+    },
+    "rdpp": {
+      "url": "https://github.com/tientrandinh/Revisiting-Reverse-Distillation.git",
+      "commit": "7f2ceb7c87e602617b8600e1a498f7ef7f5247d6",
+      "directory": "third_party/rdpp",
+      "main_table": true
+    },
+    "gnl": {
+      "url": "https://github.com/mala-lab/ADShift.git",
+      "commit": "56a87badd2e767dcb90b3b2ec00155d1e26c4bd1",
+      "directory": "third_party/ADShift",
+      "main_table": true
+    },
+    "mmr": {
+      "url": "https://github.com/zhangzilongc/MMR.git",
+      "commit": "22d1b171687509024e6f5b53b5a5e772d653d32b",
+      "directory": "third_party/MMR",
+      "main_table": false
+    }
+  }
+}

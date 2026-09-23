@@ -1,0 +1,45 @@
+{
+  "seed": 9826,
+  "val_ratio": 0.2,
+  "image_size": 256,
+  "output_root": "manifests",
+  "reuse_raw_manifest": false,
+  "train_variants": [
+    "clean",
+    "exposure",
+    "white_balance",
+    "gradient"
+  ],
+  "test_variants": [
+    "clean",
+    "exposure",
+    "white_balance",
+    "gradient",
+    "compound"
+  ],
+  "summary": "outputs/preparation_seed9826.json",
+  "datasets": [
+    {
+      "name": "robustad",
+      "builder": "robustad",
+      "root": "datasets/RobustAD",
+      "use_official_validation": false,
+      "controlled_test_domains": false
+    },
+    {
+      "name": "aebad_s",
+      "builder": "aebad",
+      "root": "datasets/AeBAD",
+      "aebad_variant": "S",
+      "use_official_validation": false,
+      "controlled_test_domains": false
+    },
+    {
+      "name": "mvtec_ad2",
+      "builder": "mvtec_ad2",
+      "root": "datasets/mvtec_ad_2",
+      "use_official_validation": true,
+      "controlled_test_domains": false
+    }
+  ]
+}

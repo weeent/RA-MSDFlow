@@ -1,0 +1,26 @@
+{
+  "method": "coral_wtflow",
+  "project_root": ".",
+  "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+  "dataset": "robustad",
+  "category": "PCB",
+  "environment": "lighting",
+  "target_domain": "test1",
+  "reference_shots": 20,
+  "reference_seed": 9827,
+  "target_fpr": 0.05,
+  "link_mode": "hardlink",
+  "device": "cuda:0",
+  "output_directory": "outputs/ra_msdflow_ablations/coral_wtflow/PCB/lighting/seed9827",
+  "runner_args": {
+    "checkpoint": "outputs/public_baselines/wtflow/robustad/PCB/lighting/seed_9827/official/author_run/final.pt",
+    "batch_size": 8,
+    "workers": 4,
+    "image_size": 256,
+    "steps": 1,
+    "calibration_folds": 5,
+    "coral_shrinkage": 0.1,
+    "coral_max_patches": 20000,
+    "top_fraction": 0.03
+  }
+}

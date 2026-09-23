@@ -1,0 +1,19 @@
+{
+  "mode": "calibrate",
+  "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+  "dataset": "robustad",
+  "category": "PCB",
+  "split": "val",
+  "inference_bundle": "outputs/msdflow/PCB/normality/seed9826/inference_bundle.pt",
+  "backbone_weights": "weights/torchvision/wide_resnet50_2-95faca4d.pth",
+  "top_m": 2,
+  "environment_steps": 4,
+  "normality_steps": 20,
+  "softmin_temperature": 0.1,
+  "calibration_quantile": 0.95,
+  "image_size": 256,
+  "batch_size": 8,
+  "num_workers": 4,
+  "device": "cuda",
+  "output_directory": "outputs/msdflow/PCB/calibration/seed9826"
+}

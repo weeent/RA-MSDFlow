@@ -1,0 +1,14 @@
+# Install a CUDA-compatible torch/torchvision pair first.
+# These are runtime imports used by the five thin public-source runners.
+FrEIA>=0.2
+geomloss>=0.2.6
+matplotlib
+numpy
+opencv-python
+Pillow
+scikit-image
+scikit-learn
+scipy
+tqdm
+transformers
+wandb

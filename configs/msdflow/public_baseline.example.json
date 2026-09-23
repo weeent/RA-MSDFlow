@@ -1,0 +1,13 @@
+{
+  "method": "wtflow",
+  "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+  "dataset": "robustad",
+  "category": "PCB",
+  "environment": "lighting",
+  "target_domain": "test1",
+  "reference_shots": 20,
+  "reference_seed": 9827,
+  "output_directory": "outputs/public_baselines/wtflow/RobustAD/PCB/lighting/seed_9827",
+  "link_mode": "hardlink",
+  "target_fpr": 0.05
+}

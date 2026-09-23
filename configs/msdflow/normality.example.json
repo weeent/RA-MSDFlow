@@ -1,0 +1,27 @@
+{
+  "train_cache_index": "cache/msdflow/PCB/train/index.json",
+  "validation_cache_index": "cache/msdflow/PCB/val/index.json",
+  "condition_bundle": "outputs/msdflow/PCB/conditions/conditions.pt",
+  "environment_checkpoint": "outputs/msdflow/PCB/transport/seed9826/checkpoints/best.pt",
+  "environment_hidden_dim": 128,
+  "spatial_hidden_channels": 64,
+  "environment_lowres_size": 4,
+  "max_scale_rate": 0.25,
+  "normality_base_channels": 128,
+  "normality_condition_hidden_dim": 64,
+  "environment_steps": 4,
+  "canonicalize_to_mode": true,
+  "endpoint_policy": "target",
+  "batch_size": 8,
+  "num_workers": 4,
+  "device": "cuda",
+  "output_directory": "outputs/msdflow/PCB/normality/seed9826",
+  "training": {
+    "epochs": 50,
+    "learning_rate": 0.0001,
+    "checkpoint_interval_epochs": 5,
+    "checkpoint_io_lock_path": "outputs/msdflow/checkpoint_io.lock",
+    "amp": true,
+    "seed": 9826
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "gpu_ids": [
+    0
+  ],
+  "base": {
+    "device": "cuda:0",
+    "backbone_weights": "weights/torchvision/wide_resnet50_2-95faca4d.pth",
+    "image_size": 256,
+    "batch_size": 8,
+    "num_workers": 4,
+    "source_modes": 4,
+    "max_source_patches": 40000,
+    "coral_shrinkage": 0.1,
+    "coral_max_patches": 20000,
+    "hidden_dim": 256,
+    "time_dim": 64,
+    "depth": 3,
+    "flow_steps": 8,
+    "patch_chunk_size": 4096,
+    "clean_anchor_mode": 0,
+    "normality_steps": 20,
+    "top_fraction": 0.03,
+    "calibration_quantile": 0.95,
+    "calibration_folds": 5,
+    "resume": true,
+    "compute_pixel_metrics": true,
+    "training": {
+      "steps": 1,
+      "patch_batch_size": 512,
+      "learning_rate": 0.0002,
+      "weight_decay": 0.0001,
+      "sinkhorn_epsilon": 0.07,
+      "sinkhorn_iterations": 30,
+      "identity_weight": 0.01,
+      "gradient_clip_norm": 1,
+      "amp": true,
+      "log_interval": 1,
+      "checkpoint_interval": 1
+    }
+  },
+  "jobs": [
+    {
+      "dataset": "robustad",
+      "category": "PCB",
+      "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/robustad/PCB/inference_bundle.pt",
+      "target_domains": {
+        "lighting": "test1",
+        "white_balance": "test2"
+      },
+      "reference_shots": 20,
+      "seeds": [
+        9827,
+        9828,
+        9829
+      ],
+      "output_directory": "outputs/ra_msdflow/robustad/PCB/seed{train_seed}"
+    },
+    {
+      "dataset": "robustad",
+      "category": "MetalParts",
+      "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/robustad/MetalParts/inference_bundle.pt",
+      "target_domains": {
+        "lighting": "test1"
+      },
+      "reference_shots": 20,
+      "seeds": [
+        9827,
+        9828,
+        9829
+      ],
+      "output_directory": "outputs/ra_msdflow/robustad/MetalParts/seed{train_seed}"
+    },
+    {
+      "dataset": "robustad",
+      "category": "PiledBags",
+      "manifest": "manifests/robustad/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/robustad/PiledBags/inference_bundle.pt",
+      "target_domains": {
+        "lighting": "test1"
+      },
+      "reference_shots": 20,
+      "seeds": [
+        9827,
+        9828,
+        9829
+      ],
+      "output_directory": "outputs/ra_msdflow/robustad/PiledBags/seed{train_seed}"
+    },
+    {
+      "dataset": "aebad_s",
+      "category": "aebad_s",
+      "manifest": "manifests/aebad_s/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/aebad_s/aebad_s/inference_bundle.pt",
+      "target_domains": {
+        "lighting": "illumination"
+      },
+      "reference_shots": 20,
+      "seeds": [
+        9827,
+        9828,
+        9829
+      ],
+      "output_directory": "outputs/ra_msdflow/aebad_s/aebad_s/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "can",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/can/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/can/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "fabric",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/fabric/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/fabric/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "fruit_jelly",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/fruit_jelly/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/fruit_jelly/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "rice",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/rice/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/rice/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "sheet_metal",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/sheet_metal/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/sheet_metal/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "vial",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/vial/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/vial/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "wallplugs",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/wallplugs/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/wallplugs/seed{train_seed}"
+    },
+    {
+      "dataset": "mvtec_ad2",
+      "category": "walnuts",
+      "manifest": "manifests/mvtec_ad2/prepared_seed9826.jsonl",
+      "inference_bundle": "outputs/source_scorers/mvtec_ad2/walnuts/inference_bundle.pt",
+      "target_domains": {
+        "overexposed": "overexposed",
+        "underexposed": "underexposed"
+      },
+      "reference_shots": 2,
+      "seeds": [
+        9827
+      ],
+      "output_directory": "outputs/ra_msdflow/mvtec_ad2/walnuts/seed{train_seed}"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "train_cache_index": "cache/msdflow/PCB/train/index.json",
+  "learned_dim": 16,
+  "descriptor_checkpoint": "outputs/msdflow/PCB/descriptor/seed9826/checkpoints/best.pt",
+  "n_modes": 4,
+  "support_quantile": 0.99,
+  "seed": 9826,
+  "output_path": "outputs/msdflow/PCB/conditions/conditions.pt"
+}
