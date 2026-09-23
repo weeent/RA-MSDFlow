@@ -14,7 +14,7 @@
 | `scripts/fetch_public_baselines.py` | 按固定提交获取公开作者代码 |
 | `REPRODUCE.md` | 数据准备、训练、参考对齐和主表复现说明 |
 
-本工作使用 RobustAD、AeBAD-S 与 MVTec AD 2。请按数据集发布方要求下载数据；示例目录分别为 `datasets/RobustAD/`、`datasets/AeBAD/`、`datasets/mvtec_ad_2/`。`configs/datasets/prepare_main.example.json` 已包含在本仓库中，运行时会生成含本机数据路径的 manifest，因此不应把 manifest 提交到版本库。
+本工作使用 RobustAD、AeBAD-S 与 MVTec AD 2。请按数据集发布方要求下载数据；示例目录分别为 `datasets/RobustAD/`、`datasets/AeBAD/`、`datasets/mvtec_ad_2/`。
 
 主表的公开源码 baseline 为 [WT-Flow](https://github.com/lil-wayne-0319/fmad)、[ReFP-AD](https://github.com/CLendering/ReFP-AD)、[MSFlow](https://github.com/cool-xuan/msflow)、[RD++](https://github.com/tientrandinh/Revisiting-Reverse-Distillation) 和 [GNL/ADShift](https://github.com/mala-lab/ADShift)。固定提交见 `configs/baselines/public_baselines.lock.json`；第三方源码不包含在本仓库中。
 
